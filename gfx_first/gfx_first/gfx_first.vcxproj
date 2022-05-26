@@ -79,7 +79,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\dev\gfx\Lib</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\dev\gfx\Includes</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\dev\gfx\Includes;C:\dev\gfx\gfx_first\gfx_first</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -144,6 +144,10 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="WindowConfig.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowConfig.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
